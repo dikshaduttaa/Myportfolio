@@ -1,0 +1,118 @@
+@import "../../variable.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;900&display=swap');
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards;
+  margin-right: 20px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.Aboutimg {
+  width: 450px;
+  height: 450px;
+  z-index: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px; /* Adjust title size for smaller screens */
+  }
+
+  .description {
+    font-size: 20px; /* Adjust font size */
+    white-space: normal; /* Allow text to wrap */
+    width: 100%; /* Full width */
+    animation: none; /* Remove typing effect for smaller screens */
+    margin: 0 10px; /* Add some margin */
+  }
+
+  .Aboutimg {
+    width: 300px; /* Adjust image size for smaller screens */
+    height: 300px;
+  }
+
+  .contactBtn {
+    font-size: 24px; /* Adjust button size */
+    padding: 12px 20px;
+  }
+}
