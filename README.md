@@ -1,6 +1,6 @@
 # MyPortfolio
 
-Welcome to my portfolio! This project highlights my skills, projects, and achievements as a web developer, crafted with a focus on interactivity, responsiveness, and clean design.
+Welcome to my portfolio! This project highlights my skills, and gives overview about myself crafted with a focus on interactivity, responsiveness, and clean design.
 
 ---
 
